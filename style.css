@@ -29,3 +29,22 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 2px;
 }
+
+/* Responsive  media query for small device */
+@media screen and (max-width: 576px) {
+  .row {
+    flex-direction: column;
+    height: auto;
+  }
+  .horizantal-collage {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Medium device Responsive media query  */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .row {
+    flex-direction: column;
+    height: auto;
+  }
+}
