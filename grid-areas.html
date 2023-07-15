@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .header,
+    .nav,
+    main,
+    .sidebar,
+    .advertis,
+    .footer {
+      background-color: grey;
+      border: 1px solid darkgray;
+      padding: 20px;
+    }
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header  header"
+        "nav    main    sidebar"
+        "nav    main    advertis"
+        "footer footer  footer";
+      gap: 20px;
+    }
+    .header {
+      grid-area: header;
+    }
+    .nav {
+      grid-area: nav;
+    }
+    main {
+      grid-row: main;
+    }
+    .sidebar {
+      grid-area: sidebar;
+    }
+    .advertis {
+      grid-area: advertis;
+      margin-top: 20px;
+    }
+    .footer {
+      grid-area: footer;
+    }
+    @media screen and (max-width: 576px) {
+      .container {
+        grid-template-areas:
+          "header"
+          "nav"
+          "main"
+          "sidebar"
+          "advertis"
+          "footer";
+      }
+    }
+    
+  </style>
+  <body class="container">
+    <header class="header">The Header</header>
+    <nav class="nav">
+      <ul>
+        <li><a href="">Nav-1</a></li>
+        <li><a href="">Nav-2</a></li>
+        <li><a href="">Nav-3</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="ariticle">
+        <h1>Main Article 1</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
+          sed dolorem magni iure incidunt sequi, eum amet quaerat aspernatur
+          aliquid.
+        </p>
+      </div>
+      <div class="ariticle">
+        <h1>Main Article 2</h1>
+        <p>
+          Iste hic quibusdam rerum illo quisquam unde, dolorem magnam
+          consequatur sed id eveniet voluptatem, dignissimos explicabo
+          architecto optio autem est!
+        </p>
+      </div>
+    </main>
+    <aside>
+      <div class="sidebar">
+        <h4>SideBar</h4>
+      </div>
+      <div class="advertis">
+        <h4>Advertisement</h4>
+      </div>
+    </aside>
+    <footer class="footer">
+      <h1>This is footer</h1>
+    </footer>
+  </body>
+</html>
